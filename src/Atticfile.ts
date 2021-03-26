@@ -38,7 +38,7 @@ export async function getZoomIdentityEntity(accessToken: IAccessToken): Promise<
     catch (err) { e2 = err; }
 
     if (resp.status !== 200) {
-        throw new GenericError(`Could not locate Zoom identity`, 96001, 403, (
+        throw new GenericError(`Could not locate Zoom identity`, 2001, 403, (
             body || e2
         ) as any as IError);
     }
