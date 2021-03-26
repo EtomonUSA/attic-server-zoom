@@ -4,7 +4,7 @@ import {
 import { promises as fs } from 'fs';
 import {
     IIdentityEntity as
-    IIdentityEntityBase
+        IIdentityEntityBase
 } from "@znetstar/attic-common/lib/IIdentity";
 
 import {
