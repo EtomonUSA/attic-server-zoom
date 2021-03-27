@@ -1,6 +1,6 @@
 {
     "name": "@etomon/attic-server-zoom",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "description": "A plugin for oauth with zoom on attic",
     "main": "lib/Atticfile.js",
     "publishConfig": {

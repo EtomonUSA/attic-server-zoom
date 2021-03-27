@@ -78,3 +78,5 @@ export class AtticServerZoom implements IPlugin {
         return JSON.parse((require('fs').readFileSync(require('path').join(__dirname, '..', 'package.json'), 'utf8'))).name;
     }
 }
+
+export default AtticServerZoom;
