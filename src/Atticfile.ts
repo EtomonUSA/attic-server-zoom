@@ -51,7 +51,7 @@ export class AtticServerZoom implements IPlugin {
         let fields: IIdentityEntity = {
             firstName: body.first_name,
             lastName: body.last_name,
-            email: body.email,
+            email: body.email || `${body.id}.zoom@${this.applicationContext.config.emailHostname}`,
             clientName: accessToken.clientName,
             phone: body.phone_number,
             otherFields: body,
