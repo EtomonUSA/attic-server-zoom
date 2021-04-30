@@ -1,6 +1,6 @@
 {
     "name": "@etomon/attic-server-zoom",
-    "version": "3.0.2",
+    "version": "3.0.3",
     "description": "A plugin for oauth with zoom on attic",
     "main": "lib/Atticfile.js",
     "publishConfig": {
@@ -50,6 +50,8 @@
         "@znetstar/attic-common": "^3"
     },
     "dependencies": {
+        "@types/lodash": "^4.14.168",
+        "lodash": "^4.17.21",
         "node-fetch": "^2.6.1",
         "tslib": "^2.0.1"
     }

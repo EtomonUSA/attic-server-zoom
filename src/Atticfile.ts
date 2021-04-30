@@ -13,6 +13,7 @@ import fetch from "node-fetch";
 import {IError} from "@znetstar/attic-common/lib/Error/IError";
 import {IIdentity} from "@znetstar/attic-common";
 import {IApplicationContext, IPlugin} from "@znetstar/attic-common/lib/Server";
+import * as _ from 'lodash';
 
 interface IIdentityEntityModel{
     externalId: string;
@@ -51,7 +52,7 @@ export class AtticServerZoom implements IPlugin {
         let fields: IIdentityEntity = {
             firstName: body.first_name,
             lastName: body.last_name,
-            email: body.email || `${body.id}.zoom@${this.applicationContext.config.emailHostname}`,
+            email: `${body.id}.zoom@${_.get(this, 'applicationContext.config.emailHostname') || process.env.EMAIL_HOSTNAME}`,
             clientName: accessToken.clientName,
             phone: body.phone_number,
             otherFields: body,
